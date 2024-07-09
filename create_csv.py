@@ -8,7 +8,8 @@ export_directory = 'Exported_Data'
 #New venv would need to paste the appropriate parent directory below:
 parent_directory = 'C:/Open Classrooms Projects/Book_Scraping/Book_Scraper'
 path = os.path.join(parent_directory, export_directory)
-os.mkdir(path)
+if not os.path.isdir(path):
+    os.mkdir(path)
 
 
 #Create Exported_Data folder as well as .csv file within new folder
