@@ -36,3 +36,9 @@ If you would like to only scrape a specific category you can use the below promp
 (type and click enter): 
 1. python main.py categories --travel
 """
+
+"""
+Future improvements to make: 
+1. Update CSV formatting to use DataFrame in order to bypass the need for parsing the CSV output via delimiter
+2. Fix Exported Directory section in create_csv.py to be dynamic so that initial folder does not need to be created manually
+3. Fix Cover page output so that UPC code shows rather than phrase "UPC"
