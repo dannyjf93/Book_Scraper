@@ -29,3 +29,18 @@ def csv_file_append(csv_filename, info):
         book_csv = csv.writer(csv_file, delimiter=';')
         book_csv.writerow(info)
 
+#create Cover Pages folder within Extracted_Data folder and write images as.jpg to new folder based on category
+def download_images(title, UPS, img_url, category_name):
+    img_directory = 'Exported_Data/Cover_Pages/'
+    img_category_dir = img_directory + category_name + '/'
+    img_cleaned = ''.join([x for x in title[:100] if x.isalnum() or x in ' ']).replace(' ', '_') + '.jpg'
+    img_filename = UPC + '_' + img_cleaned
+    img_data = requests.get(img_url).content
+
+    if not os.path.isdir(img_directory):
+        os.mkdir(img_directory)
+    img_path = os.path.join(img_category_dir, img_filename)
+    if not os.path.isdir(img_category_dir):
+        os.mkdir(img_category_dir)
+    file = open(img_path, 'wb')
+    file.write(img_data)
