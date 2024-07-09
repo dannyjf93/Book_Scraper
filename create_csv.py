@@ -22,3 +22,9 @@ def create_csv_file(csv_filename):
             'review-rating',
             'image_url'
         ])
+
+#append extracted book information to csv file
+def csv_file_append(csv_filename, info):
+    with open('./Exported_Data/Category_CSVs/' + csv_filename,'a+', newline='', encoding='utf-8') as csv_file:
+        book_csv = csv.writer(csv_file, delimiter=';')
+        book_csv.writerow(info)
