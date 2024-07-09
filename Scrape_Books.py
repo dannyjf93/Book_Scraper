@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 from category_iteration import get_category_pages_urls
 
-def Scrape_Books():
+def main():
     #Prompt the user to choose whether they want to scrape the entire website or only one category
     print("\n Scraping books.toscrape.com\n")
     time.sleep(1)
@@ -39,7 +39,7 @@ def Scrape_Books():
         else:
             print('\n\nPlease enter a valid url (full website or one category).\n\n')
             time.sleep(2)
-            Scrape_Books()
+            main()
     #retry if error bad response received - if bad response is continuous application will close
     else:
         response.raise_for_status()
@@ -53,7 +53,7 @@ def Scrape_Books():
         if retry == "y":
             print("Restarting")
             time.sleep(2)
-            Scrape_Books()
+            main()
         elif retry == "n":
             print('Closing application')
             time.sleep(2)
@@ -68,5 +68,5 @@ def timer(start_time):
     print('\n\nAll books exported in ' + end_time)
 
 
-if __name__ == "__Scrape_Books__":
-    Scrape_Books()
+if __name__ == "__main__":
+    main()
