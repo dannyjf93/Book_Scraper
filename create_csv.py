@@ -8,7 +8,7 @@ def create_csv_file(csv_filename):
     csv_directory = 'Exported_Data/Category_CSVs'
     if not os.path.isdir(csv_directory):
         os.mkdir(csv_directory)
-    with open('./Exported_Data/Category_CSVs/' + csv_filename, 'w', newline='', encoding-'utf-8') as csv_file:
+    with open('./Exported_Data/Category_CSVs/' + csv_filename, 'w', newline='', encoding='utf-8') as csv_file:
         book_csv = csv.writer(csv_file, delimiter=';')
         book_csv.writerow([
             'product_page_url',
@@ -34,7 +34,7 @@ def download_images(title, UPS, img_url, category_name):
     img_directory = 'Exported_Data/Cover_Pages/'
     img_category_dir = img_directory + category_name + '/'
     img_cleaned = ''.join([x for x in title[:100] if x.isalnum() or x in ' ']).replace(' ', '_') + '.jpg'
-    img_filename = UPC + '_' + img_cleaned
+    img_filename = 'UPC' + '_' + img_cleaned
     img_data = requests.get(img_url).content
 
     if not os.path.isdir(img_directory):
