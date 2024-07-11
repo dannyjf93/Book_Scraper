@@ -43,7 +43,7 @@ def download_images(title, UPC, img_url, category_name):
     img_directory = 'Exported_Data/Cover_Pages/'
     img_category_dir = img_directory + category_name + '/'
     img_cleaned = ''.join([x for x in title[:100] if x.isalnum() or x in ' ']).replace(' ', '_') + '.jpg'
-    img_filename = 'UPC' + '_' + img_cleaned
+    img_filename = UPC + '_' + img_cleaned
     img_data = requests.get(img_url).content
 
     if not os.path.isdir(img_directory):
