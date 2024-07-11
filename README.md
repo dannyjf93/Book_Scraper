@@ -1,5 +1,5 @@
 # Book_Scraper
-"""
+###
 This application was created and tested using the following system specifications
 1. Windows 10
 2. Python 3.12.4
@@ -15,16 +15,14 @@ This application uses multiple scripts called on by the main application script 
    b. Cover pages for each book downloaded as .jpg files
 
 In order to setup the application you will need to perform the following steps: 
-1. Create a new folder in the C directory as follows: 
-   a. C:\Open Classrooms Projects\Book_Scraping
-2. Ensure Python (latest version) is installed
-3. Open Command Prompt
-4. Type Python and click enter
-5. Type git clone https://github.com/dannyjf93/Book_Scraper.git and click enter
-6. Type cd Book_Scraper and click enter
-7. Type python -m venv env and click enter
-8. Type env\Scripts\activate and click enter
-9. Type pip install -r requirements.txt and click enter
+1. Ensure Python (latest version) is installed
+2. Open Command Prompt
+3. Type Python and click enter
+4. Type git clone https://github.com/dannyjf93/Book_Scraper.git and click enter
+5. Type cd Book_Scraper and click enter
+6. Type python -m venv env and click enter
+7. Type env\Scripts\activate and click enter
+8. Type pip install -r requirements.txt and click enter
 
 Now that the application has been set up and the requirements have been installed you can view possible commands using the below prompt (type and click enter)
 1. python main.py --help
@@ -35,10 +33,9 @@ If you would like to scrape all categories you can use the below prompt (type an
 If you would like to only scrape a specific category you can use the below prompt (below is just an example. You can type any category name you would like)
 (type and click enter): 
 1. python main.py categories --travel
-"""
+###
 
-"""
+###
 Future improvements to make: 
 1. Update CSV formatting to use DataFrame in order to bypass the need for parsing the CSV output via delimiter
-2. Fix Exported Directory section in create_csv.py to be dynamic so that initial folder does not need to be created manually
-"""
+###
