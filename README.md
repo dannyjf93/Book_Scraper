@@ -40,6 +40,7 @@ In order to run the application follow the below commands:
 
 ###
 Future improvements to make: 
-Create simple GUI for ease of use - allow for user to open GUI, click Run, paste input for prompt, and application will export data as expected
-Update main application with cancel option if started but user wishes to cancel operation
+1. Create simple GUI for ease of use - allow for user to open GUI, click Run, paste input for prompt, and application will export data as expected
+2. Update main application with cancel option if started but user wishes to cancel operation
+3. Improve readme readability
 ###
