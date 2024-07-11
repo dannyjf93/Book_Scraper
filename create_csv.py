@@ -16,7 +16,7 @@ def create_csv_file(csv_filename):
         os.mkdir(csv_directory)
 
     with open('./Exported_Data/Category_CSVs/' + csv_filename, 'w', newline='', encoding='utf-8') as csv_file:
-        book_csv = csv.writer(csv_file, delimiter=';')
+        book_csv = csv.writer(csv_file)
         book_csv.writerow([
             'product_page_url',
             'UPC',
@@ -33,7 +33,7 @@ def create_csv_file(csv_filename):
 #append extracted book information to csv file
 def csv_file_append(csv_filename, info):
     with open('./Exported_Data/Category_CSVs/' + csv_filename,'a+', newline='', encoding='utf-8') as csv_file:
-        book_csv = csv.writer(csv_file, delimiter=';')
+        book_csv = csv.writer(csv_file)
         book_csv.writerow(info)
 
 #create Cover Pages folder within Extracted_Data folder and write images as.jpg to new folder based on category
