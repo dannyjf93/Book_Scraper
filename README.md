@@ -37,5 +37,5 @@ If you would like to only scrape a specific category you can use the below promp
 
 ###
 Future improvements to make: 
-1. Update CSV formatting to use DataFrame in order to bypass the need for parsing the CSV output via delimiter
+TBD
 ###
