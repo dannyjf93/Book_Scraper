@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from get_book_data import extract_book_info
 from create_csv import create_csv_file
 
-#Get category naem from category url string
+#Get category name from category url string
 def get_category_name(category_url):
     category_name = category_url.replace('https://books.toscrape.com/catalogue/category/books/', '')
     category_name = category_name.replace('/index.html', '').replace('_', '').replace('-', ' ')
